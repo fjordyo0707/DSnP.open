@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string>
 #include "p2Json.h"
+#include <iomanip>
 
 using namespace std;
 
@@ -28,7 +29,15 @@ int main()
 
    // TODO read and execute commands
    // cout << "Enter command: ";
+   string sUserCommand = "Nothing";
+   bool  bExit;
    while (true) {
       // cout << "Enter command: ";
+      json.print();
+      cout << " sum is " << json.sum() << endl;
+      cout << " ave is " << fixed <<  setprecision(1) << json.average() <<endl;
+      cout << json.max().getValue() << endl;
+      cout << json.min().getValue() << endl;
+      break;
    }
 }
