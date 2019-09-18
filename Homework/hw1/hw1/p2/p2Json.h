@@ -34,15 +34,18 @@ class Json
 {
 public:
    // TODO: define constructor & member functions on your own
+   enum class command {SUM, AVE, MAX, MIN};
    bool read(const string&);
    void print();
    int sum();
    float average();
-   int  get_max_index();
-   int get_min_index();
-   const JsonElem& max();
-   const JsonElem& min();
+   const JsonElem& get_max();
+   const JsonElem& get_min();
+   void add(string&, int);
+   string print_max();
+   string print_min();
    bool isValid();
+   bool interface(string);
 
 private:
    vector<JsonElem>       _obj;  // DO NOT change this definition.
